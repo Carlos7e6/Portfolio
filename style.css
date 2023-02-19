@@ -1,0 +1,225 @@
+:root {
+    --theme-color: black;
+    --text-h1-color: rgb(104, 255, 104);
+    --text-h2-color: rgb(14, 137, 14);
+}
+
+* {
+    border: solid white 1px;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-image: url(img/wallpaper.jpg);
+    background-repeat: repeat;
+    background-size: 11.2%;
+
+}
+
+h1 {
+    color: rgb(218, 249, 217);
+    font-size: 70px;
+}
+
+h3 {
+    font-size: 50px;
+    color: rgb(104, 255, 104);
+}
+
+h2 {
+    color: rgb(187, 243, 178);
+    font-size: 40px;
+    margin-left: 40px
+}
+
+
+.all {
+
+    width: 80%;
+
+    margin-top: 6%;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid;
+    padding: 5%;
+    border-color: var(--text-h1-color);
+    background-color: var(--theme-color);
+
+}
+
+.letters {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 80px;
+}
+
+.imgs {
+    margin-left: 5%;
+    display: flex;
+    margin-right: 80px;
+}
+
+.text {
+    width: 500px;
+
+}
+
+.eslogan {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.logos {
+
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    margin-right: 50px;
+}
+
+.me {
+    width: 420px;
+}
+
+.small {
+    background-color: var(--text-h1-color);
+    width: 70px;
+    padding: 6px;
+    border-radius: 50%;
+}
+
+img[alt="linkedin"],
+img[alt="games"] {
+    position: relative;
+    left: 70px;
+
+}
+
+img[alt="cv"],
+img[alt="github"] {
+    position: relative;
+    left: 30px;
+
+}
+
+img[alt="linkedin"]:hover {
+    background-color: cyan;
+}
+
+img[alt="github"]:hover {
+    background-color: orange;
+}
+
+img[alt="cv"]:hover {
+    background-color: yellow;
+}
+
+img[alt="games"]:hover {
+    background-color: rgb(198, 5, 198);
+}
+
+
+
+@media (max-width: 500px) {
+
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    body {
+        background-size: 20%;
+    }
+
+    .all {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 650px;
+        border-radius: 70px;
+        background-color: rgba(0, 0, 0, 0.918);
+    }
+
+    h1,
+    h2, h3 {
+        font-size: 220%;
+        margin: 0px;
+    }
+
+    h2{
+        font-size:150%;
+    }
+    .eslogan{
+
+        position: relative;
+        top: 10%;
+    }
+
+    .letters{
+        margin:0px;
+    }
+    .imgs {
+        display: flex;
+
+        flex-direction: column;
+        margin-left: 0%;
+
+        margin-right: 0px;
+       
+    }
+
+    .text {
+        width: 50px;
+
+    }
+
+    .logos {
+
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+        margin-right: 0px;
+        position: relative;
+        top: 0px;
+        
+
+    }
+    .me {
+
+        margin-top: 10%;
+        width: 80%;
+        align-self: center;
+        
+    }
+
+    img[alt="linkedin"],
+    img[alt="games"] {
+        position: relative;
+        left: 0px;
+
+    }
+
+    img[alt="cv"],
+    img[alt="github"] {
+        position: relative;
+        left: 0px;
+
+    }
+
+    .small {
+        background-color: var(--text-h1-color);
+        width: 30px;
+        padding: 10px;
+    }
+}
