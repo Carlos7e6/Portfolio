@@ -222,4 +222,10 @@ img[alt="games"]:hover {
         width: 30px;
         padding: 10px;
     }
+    img[alt="linkedin"]:hover,img[alt="github"]:hover,img[alt="cv"]:hover,img[alt="games"]:hover 
+    {
+        background-color: var(--text-h1-color);
+    }
 }
+
+
