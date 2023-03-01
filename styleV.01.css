@@ -154,20 +154,48 @@ ul {
 }
 
 @media screen and (max-width: 1150px) {
+  *{
+    border: 1px black solid;
+  }
+  
   h1,
   h3 {
-    font-size: 3rem;
+    font-size: 11vw;
+  }
+  h2{
+    font-size: 5vw;
+  }
+
+  main
+  {
+    width: 90vw;
+    height: 90vh;
+    gap: 0.5rem;
   }
   main,
   .letters,
   .imgs {
-    gap: 2rem;
+    gap: 1rem;
   }
   main,
   .imgs {
     flex-direction: column;
+    align-items: center;
+
   }
+
+  main{
+    width: fit-content(200px) ;
+  }
+
+  
   .imgs .logos {
-    flex-direction: row;
+    flex-direction: row; 
+  }
+
+
+
+  .me{
+    width: 35vh;
   }
 }
