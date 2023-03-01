@@ -1,236 +1,173 @@
+/* Fuentes de fonts.google.com, intenta usar como máximo 2 y jugar con si font-weight
+y font-size. Hay un montón de webs que te dicen como combinar tipografias (font pairing) */
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Lobster&display=swap");
+
 :root {
-    --theme-color: black;
-    --text-h1-color: rgb(104, 255, 104);
-    --text-h2-color: rgb(14, 137, 14);
+  --theme-color: #081c15;
+  --text-h1-color: #40916c;
+  --text-h2-color: #74c69d;
+  /* 
+    yo he usado esta: https://coolors.co/palette/d8f3dc-b7e4c7-95d5b2-74c69d-52b788-40916c-2d6a4f-1b4332-081c15 */
 }
-
 * {
-    /*border: solid white 1px;*/
-    margin: 0px;
-    padding: 0px;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  /* esto del box-sizing no es obligatorio, pero en trabajos con gente de diseño
+    es importante para saber las medidas exactas, 
+    lo que hace es contar el border y el padding dentro del width */
 }
-
 body {
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    background-image: url(img/wallpaper.jpg);
-    background-repeat: repeat;
-    background-size: 11.2%;
-
+  background-image: url(img/wallpaper.jpg);
+  background-repeat: repeat;
+  background-size: 17.2%;
+  font-family: "Lato", sans-serif;
 }
-
 h1 {
-    color: rgb(218, 249, 217);
-    font-size: 70px;
+  color: #d8f3dc;
+  font-size: 4rem; /* Intenta usar rems en lugar de px cuando sea posible,
+    es más responsive :), los pixels para cuando quieras una medida fija siempre,
+    sin importar el tamaño de la pantalla (o si alguien de diseño te lo pide) */
+  white-space: nowrap;
 }
-
-h3 {
-    font-size: 50px;
-    color: rgb(104, 255, 104);
-}
-
 h2 {
-    color: rgb(187, 243, 178);
-    font-size: 40px;
-    margin-left: 40px;
+  color: #95d5b2;
+  font-size: 2rem;
+  font-weight: 300;
+}
+h3 {
+  font-size: 4.5rem;
+  color: #2d6a4f;
+  font-family: "Lobster", cursive;
+  text-shadow: 0.1rem 0.1rem #74c69d;
 }
 
-
-.all {
-
-    width: 80%;
-
-    margin-top: 6%;
-    display: flex;
-    justify-content: space-between;
-    border: 1px solid;
-    padding: 5%;
-    border-color: var(--text-h1-color);
-    background-color: var(--theme-color);
-
+main {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  /* todo lo de arriba es un truqui para que quede 100% centrado en la pantalla,
+    verticalmente y horizontalmente. Es muy útil para modals y heros */
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 0 0.5rem var(--text-h1-color),
+    0 0.75rem 0.5rem 0.25rem rgba(0, 0, 0, 0.5);
+  /* uso box-shadow en este caso porque a veces el border no coge bien el border radius, pero si puedes usar border, mejor */
+  border-radius: 0.5rem;
+  padding: 4rem;
+  background-color: var(--theme-color);
+  gap: 5rem;
 }
 
 .letters {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    margin-left: 80px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-around;
+  width: fit-content;
+  gap: 3rem;
+  /* el gap es el espacio que hay entre los elementos del flex (o grid),
+    mejor que poner margins (aunque a veces hay que ponerlos igualmente segúun el caso) */
 }
 
 .imgs {
-    margin-left: 5%;
-    display: flex;
-    margin-right: 80px;
-}
-
-.text {
-    width: 500px;
-
-}
-
-.eslogan {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
 }
 
 .logos {
-
-    display: flex;
-    justify-content: space-around;
-    flex-direction: column;
-    margin-right: 50px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
 }
 
+div:has(.me) {
+  /* normalmente es mejor usar clases separadas, pero te he metido por aquí
+    este y otros selectores chachis de CSS, por si no los conocias */
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .me {
-    width: 420px;
+  object-fit: contain;
+  border: 0.5rem solid var(--text-h1-color);
+  max-width: 50vh; /* vh=viewport height, vw=viewport width,
+    son unidades para indicar un
+    porcentage respecto al viewport (la parte visible de la web en pantalla) */
+  border-radius: 50vh;
 }
 
-.small {
-    background-color: var(--text-h1-color);
-    width: 70px;
-    padding: 6px;
-    border-radius: 50%;
+a:has(i) {
+  border: 0.25rem solid var(--text-h1-color);
+  padding: 0.5rem;
+  border-radius: 50vh;
+  width: 4rem;
+  height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
 }
 
-img[alt="linkedin"],
-img[alt="games"] {
-    position: relative;
-    left: 70px;
-
+i {
+  color: var(--text-h1-color);
+  font-size: 2rem;
+}
+/* en class*=blabla el asterisco indica que contiene blabla,
+si pones class^=blabla significa que empieza por blabla y si pones class$=blabla
+que temrina por blabla esos tres simbolos se usan de la misma forma en expresiones regulares */
+a:has(i[class*="linkedin"]):hover i[class*="linkedin"],
+a:has(i[class*="linkedin"]):hover {
+  color: cyan;
+  border-color: cyan;
 }
 
-img[alt="cv"],
-img[alt="github"] {
-    position: relative;
-    left: 30px;
-
+a:has(i[class*="github"]):hover i[class*="github"],
+a:has(i[class*="github"]):hover {
+  color: orange;
+  border-color: orange;
 }
 
-img[alt="linkedin"]:hover {
-    background-color: cyan;
+a:has(i[class*="id-badge"]):hover i[class*="id-badge"],
+a:has(i[class*="id-badge"]):hover {
+  color: yellow;
+  border-color: yellow;
 }
 
-img[alt="github"]:hover {
-    background-color: orange;
+a:has(i[class*="gamepad"]):hover i[class*="gamepad"],
+a:has(i[class*="gamepad"]):hover {
+  color: rgb(198, 5, 198);
+  border-color: rgb(198, 5, 198);
 }
 
-img[alt="cv"]:hover {
-    background-color: yellow;
+ul {
+  list-style-type: none;
 }
 
-img[alt="games"]:hover {
-    background-color: rgb(198, 5, 198);
-}
-
-
-
-@media (max-width: 500px) {
-
-    * {
-        margin: 0px;
-        padding: 0px;
-    }
-
-    body {
-        background-size: 20%;
-    }
-
-    .all {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: 650px;
-        border-radius: 70px;
-        background-color: rgba(0, 0, 0, 0.918);
-    }
-
-    h1,
-    h2,
-    h3 {
-        font-size: 220%;
-        margin: 0px;
-    }
-
-    h2 {
-        font-size: 150%;
-    }
-
-    .eslogan {
-
-        position: relative;
-        top: 10%;
-    }
-
-    .letters {
-        margin: 0px;
-    }
-
-    .imgs {
-        display: flex;
-
-        flex-direction: column;
-        margin-left: 0%;
-
-        margin-right: 0px;
-
-    }
-
-    .text {
-        width: 50px;
-
-    }
-
-    .logos {
-
-        display: flex;
-        justify-content: space-around;
-        flex-direction: row;
-        margin-right: 0px;
-        position: relative;
-        top: 0px;
-
-
-    }
-
-    .me {
-
-        margin-top: 10%;
-        width: 80%;
-        align-self: center;
-
-    }
-
-    img[alt="linkedin"],
-    img[alt="games"] {
-        position: relative;
-        left: 0px;
-
-    }
-
-    img[alt="cv"],
-    img[alt="github"] {
-        position: relative;
-        left: 0px;
-
-    }
-
-    .small {
-        background-color: var(--text-h1-color);
-        width: 30px;
-        padding: 10px;
-    }
-
-    img[alt="linkedin"]:hover,
-    img[alt="github"]:hover,
-    img[alt="cv"]:hover,
-    img[alt="games"]:hover {
-        background-color: var(--text-h1-color);
-    }
+@media screen and (max-width: 1150px) {
+  h1,
+  h3 {
+    font-size: 3rem;
+  }
+  main,
+  .letters,
+  .imgs {
+    gap: 2rem;
+  }
+  main,
+  .imgs {
+    flex-direction: column;
+  }
+  .imgs .logos {
+    flex-direction: row;
+  }
 }
