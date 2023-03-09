@@ -196,6 +196,8 @@ ul {
 
   .me{
     width: 0vw;
+    border: 0px;
+
   }
 
   a:has(i) {
@@ -261,6 +263,8 @@ a:has(i[class*="gamepad"]):hover {
 
   .me{
     width: 50vw;
+    border: 0.3rem solid var(--text-h1-color);
+    
   }
 
   a:has(i) {
