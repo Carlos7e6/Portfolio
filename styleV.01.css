@@ -131,11 +131,11 @@ a:has(i[class*="linkedin"]):hover {
   border-color: cyan;
 }
 
-a:has(i[class*="github"]):hover i[class*="github"],
+/* a:has(i[class*="github"]):hover i[class*="github"],
 a:has(i[class*="github"]):hover {
   color: orange;
   border-color: orange;
-}
+} */
 
 a:has(i[class*="id-badge"]):hover i[class*="id-badge"],
 a:has(i[class*="id-badge"]):hover {
@@ -143,10 +143,16 @@ a:has(i[class*="id-badge"]):hover {
   border-color: yellow;
 }
 
-a:has(i[class*="gamepad"]):hover i[class*="gamepad"],
-a:has(i[class*="gamepad"]):hover {
+a:has(i[class*="github"]):hover i[class*="github"],
+a:has(i[class*="github"]):hover {
   color: rgb(198, 5, 198);
   border-color: rgb(198, 5, 198);
+}
+
+a:has(i[class*="youtube"]):hover i[class*="youtube"],
+a:has(i[class*="youtube"]):hover {
+  color: rgb(199, 1, 1);
+  border-color: rgb(199, 1, 1);
 }
 
 ul {
